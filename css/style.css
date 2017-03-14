@@ -102,6 +102,13 @@ header {
   vertical-align: middle;
   box-shadow: #111 0 0 20px;
 }
+/* Trying to style the autocomplete text */
+.ui-autocomplete-item,
+.ui-helper-hidden-accessible {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 1.5rem;
+
+}
 #submit-btn {
   background: #ffe500;
   color: #000;

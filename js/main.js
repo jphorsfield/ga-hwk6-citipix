@@ -2,6 +2,30 @@ console.log("Main.js loaded - hello");
 
 $(function() {
 
+	//Autocomplete entries for the search bar
+	var availableTags = [
+      "New York",
+      "NYC",
+      "New York City",
+      "San Francisco",
+      "SF",
+      "Bay Area",
+      "Los Angeles",
+      "LA",
+      "LAX",
+      "Austin",
+      "ATX",
+      "Sydney",
+      "SYD"
+    ];
+    
+    //jQuery function for autocomplete
+    //styling not working on the entries though
+    //need more time to work that through
+    $('#city-type').autocomplete({
+      source: availableTags
+    });
+
 	// Remove Placeholder value on focus and also clear 
 	// any text for subsequent retries
 	$('#city-type').on('focus', function() {
@@ -67,6 +91,9 @@ function setBackgroundImage(inputVal) {
 			$('body').css("-webkit-background-size", "cover");
 			$('body').css("-moz-background-size", "cover");
 			$('body').css("-o-background-size", "cover");
+			//Trying transisition effect didn't get it working
+			//leaving it in for now - will fix later
+			// $('body').fadeIn('slow');
 			break;
 		case 'san francisco':
 		case 'sf':
