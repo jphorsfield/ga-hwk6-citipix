@@ -2,7 +2,8 @@ console.log("Main.js loaded - hello");
 
 $(function() {
 
-	// Remove Placeholder value on focus and also clear any text for subsequent retries
+	// Remove Placeholder value on focus and also clear 
+	// any text for subsequent retries
 	$('#city-type').on('focus', function() {
 		$('#city-type').removeAttr('placeholder');
 		if ($(this).val().length > 0) {
@@ -34,9 +35,8 @@ $(function() {
 function checkTextBox() {
 		var retVal;
 		var boxText = $.trim($('#city-type').val());
-		var boxLength = boxText.length;
 		var alphaCheck = isAlphaString(boxText);
-		if (boxLength === 0 || alphaCheck === false)
+		if (boxText.length === 0 || alphaCheck === false)
 		{
 			alert('There must be a city name in the input box')
 			retVal = 'false';
